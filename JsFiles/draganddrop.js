@@ -1,46 +1,34 @@
-function allowDrop(ev)
-{
+"use strict";
+function allowDrop(ev) {
     ev.preventDefault();
 }
-
-function drag(ev)
-{
-    ev.dataTransfer.setData("text", ev.target.id);
+function drag(ev) {
+    ev.dataTransfer && ev.dataTransfer.setData("text", ev.target.id);
 }
-
-function drop(ev)
-{
+function drop(ev) {
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.currentTarget.appendChild(document.getElementById(data));
+    var data = ev.dataTransfer && ev.dataTransfer.getData("text");
+    if (data) {
+        const elem = document.getElementById(data);
+        elem && ev.currentTarget && ev.currentTarget.appendChild(elem);
+    }
 }
-
-
-
-function DraggableText(data, id)
-{
-    for (var i = 0; i < data.length; i++)
-    {
+function DraggableText(data, id) {
+    for (var i = 0; i < data.length; i++) {
         var el = document.createElement("span");
         el.id = "text" + i;
         el.draggable = true;
         el.innerHTML = data[i];
-        el.ondragstart = function (ev) { drag(ev); }
-        document.getElementById(id).appendChild(el);
+        el.ondragstart = function (ev) { drag(ev); };
+        const elem = document.getElementById(id);
+        elem && elem.appendChild(el);
     }
 }
-
-
-
-function loadDoc()
-{
+function loadDoc() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function ()
-    {
-        if (this.readyState == 4 && this.status == 200)
-        {
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
             var jsMydata = JSON.parse(this.responseText);
-
             myString(jsMydata);
             // document.getElementById("div2").innerHTML = this.responseText;
         }
@@ -49,16 +37,11 @@ function loadDoc()
     xhttp.send();
 }
 //loadDoc();
-
-async function loadDoc2()
-{
+async function loadDoc2() {
     const response = await fetch("./wordsInHindi/newWordInHindi.json");
     myString(await response.json());
 }
-
 loadDoc2();
-
-
 /* function myPrintData(jsMydata,i)
 {
 
@@ -69,8 +52,6 @@ loadDoc2();
     var obj = new compareString(currentWord, letterArray,i);
 
 } */
-
-
 //var data = ['कि', 'ता', 'ब'];
 //var a = new DraggableText( data);
 //a.addSpan(); 
