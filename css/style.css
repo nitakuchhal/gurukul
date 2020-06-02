@@ -1,0 +1,19 @@
+div {
+  width: 700px;
+  height: 120px;
+  padding: 5px;
+  margin: 20px 20px 20px 30px;
+  border: 5px solid #aaaaaa;
+  border-color: burlywood;
+
+}
+span {
+  font-size: 60px;
+  color:brown;
+  margin:0px 10px 0px 0px;
+
+}
+
+img {
+  width:200px;
+}

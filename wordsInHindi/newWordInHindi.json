@@ -1,0 +1,54 @@
+ [
+	{
+		"word": "किताब",
+		"matra": "इ",
+		"letters": " क इ कि खि ता टा व ब ",
+		"image": "picKitab.jpg",
+		"sound ": "soundKitab.mp4",
+		"begSound": "क",
+		"endSound": "ब",
+		"possibeWords": "किताब खिताब कइताब कइतआब"
+	},
+	{
+		"word": "तितली",
+		"matra": "ई",
+		"letters": "त इ ति ट त ल ई ली",
+		"image": "picbutterfly.jpg",
+		"sound ": "soundKitab.mp7",
+		"begSound": "त",
+		"endSound": "ल",
+		"possibeWords": "तितली टिटली तइतली टइटली"
+	},
+	{
+		"word": "मछली",
+		"matra": "ई",
+		"letters": "म च छ ल ई ली ",
+		"image": "picFish.jpg",
+		"sound ": "soundKitab.mp9",
+		"begSound": "म",
+		"endSound": "ल",
+		"possibeWords": "मचलई मचली मछलई मछली"
+	},
+	{
+		"word": "दुकान",
+		"matra": "उ",
+		"letters": "द ड उ दु डु क आ का न",
+		"image": "picShop.jpg",
+		"sound ": "soundKitab.mp10",
+		"begSound": "द",
+		"endSound": "न",
+		"possibeWords": "डुकान दुकान डउकान दउकान"
+	},
+	{
+		"word": "गुलाबी",
+		"matra": "उ",
+		"letters": "ग उ गु ल आ ला ब ई बी",
+		"image": "picPink.jpg",
+		"sound ": "soundKitab.mp11",
+		"begSound": "ग",
+		"endSound": "ब",
+		"possibeWords": "गउलाबी गुलाबी घउलाबी घुलाबी"
+	}
+]
+
+
