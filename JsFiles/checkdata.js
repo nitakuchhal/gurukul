@@ -45,3 +45,4 @@ function myString(jsMydata) {
     document.getElementById("displayResult").innerHTML = newText === actualstringfromarray ? "correct" : "wrong";
 } */
 //document.getElementById("myBtn").onclick = displayDate;
+//# sourceMappingURL=checkdata.js.map

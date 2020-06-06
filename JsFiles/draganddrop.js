@@ -24,24 +24,11 @@ function DraggableText(data, id) {
         elem && elem.appendChild(el);
     }
 }
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var jsMydata = JSON.parse(this.responseText);
-            myString(jsMydata);
-            // document.getElementById("div2").innerHTML = this.responseText;
-        }
-    };
-    xhttp.open("GET", "./wordsInHindi/newWordInHindi.json", true);
-    xhttp.send();
-}
-//loadDoc();
-async function loadDoc2() {
+async function loadDoc() {
     const response = await fetch("./wordsInHindi/newWordInHindi.json");
     myString(await response.json());
 }
-loadDoc2();
+// loadDoc();
 /* function myPrintData(jsMydata,i)
 {
 
@@ -55,3 +42,4 @@ loadDoc2();
 //var data = ['कि', 'ता', 'ब'];
 //var a = new DraggableText( data);
 //a.addSpan(); 
+//# sourceMappingURL=draganddrop.js.map
