@@ -70,7 +70,8 @@ class scramble
         }
 
         document.getElementById("displayResult")!.innerHTML =
-            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ? "correct" : "Wrong";
+            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ?
+                "correct" : "Wrong";
     }
 
     //document.getElementById('btnScramble')!.onclick as HTMLButtonElement = compareJumbledArray();

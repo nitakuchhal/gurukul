@@ -44,7 +44,8 @@ class scramble {
             droppedString += divUnScramble.children[j].innerHTML + " ";
         }
         document.getElementById("displayResult").innerHTML =
-            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ? "correct" : "Wrong";
+            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ?
+                "correct" : "Wrong";
     }
     //document.getElementById('btnScramble')!.onclick as HTMLButtonElement = compareJumbledArray();
     _nextQuestion() {
