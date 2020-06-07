@@ -1,0 +1,143 @@
+﻿ [
+        {
+            "sentence": "राम खाना खा रहा है ।",
+            "matra": "आ",
+            "status": "begin"
+        },
+        {
+            "sentence": "यह गिलास उमा का है ।",
+            "matra": "इ",
+            "status": "begin",
+            "alternate": "यह उमा का गिलास है ।"
+        },
+        {
+            "sentence": "राजा आम उठा रहा है ।",
+            "matra": "आ",
+            "status": "begin"
+        },
+        {
+            "sentence": "अजय पाठशाला जा रहा है ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "यह तकिया लाल है ।",
+            "matra": "इ",
+            "status": "begin",
+            "alternate": "यह लाल तकिया है ।"
+        },
+        {
+            "sentence": "अमर एक अनानास ला ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "राम हरा आम खा रहा था ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "ईशान घर पर पढ़ता है ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "इवान पढ़ रहा था ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "इवान अखबार पढ़ रहा था ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "अमर कागज़ काट ।",
+            "matra": "आ",
+            "status": "review"
+        },
+        {
+            "sentence": "परिवार खाना खा रहा है ।",
+            "matra": "इ",
+            "status": "begin"
+        },
+        {
+            "sentence": "मानस गिटार बजा रहा है ।",
+            "matra": "इ",
+            "status": "begin"
+        },
+        {
+            "sentence": "कल शनिवार था ।",
+            "matra": "इ",
+            "status": "review"
+        },
+        {
+            "sentence": "निकिता किताब पढ़ रही है ।",
+            "matra": "ई",
+            "status": "review"
+        },
+        {
+            "sentence": "यह साइकिल उसकी है ।",
+            "matra": "ई",
+            "status": "review",
+            "alternate": "यह उसकी साइकिल है ।"
+        },
+        {
+            "sentence": "यह तकिया नीला है ।",
+            "matra": "ई",
+            "status": "review",
+            "alternate": "यह नीला तकिया है ।"
+        },
+        {
+            "sentence": "चील उड़ रही है ।",
+            "matra": "ई",
+            "status": "begin"
+        },
+        {
+            "sentence": "सीता घर साफ कर रही है ।",
+            "matra": "ई",
+            "status": "begin"
+        },
+        {
+            "sentence": "समीर की कमीज़ पीली है ।",
+            "matra": "ई",
+            "status": "begin",
+            "alternate": "समीर की पीली कमीज़ है ।"
+        },
+        {
+            "sentence": "समीर दाल और चावल खा रहा है ।",
+            "matra": "ई",
+            "status": "review",
+            "alternate": "समीर चावल और दाल खा रहा है ।"
+        },
+        {
+            "sentence": "रिया आठ आम लायी ।",
+            "matra": "ई",
+            "status": "review"
+        },
+        {
+            "sentence": "यह कपड़ा गीला है ।",
+            "matra": "ई",
+            "status": "begin"
+        },
+        {
+            "sentence": "निकिता नीला कागज़ काट रही है ।",
+            "matra": "ई",
+            "status": "review"
+        },
+        {
+            "sentence": "हाथी पानी पी रहा है ।",
+            "matra": "ई",
+            "status": "begin"
+        },
+        {
+            "sentence": "रिया इडली खा रही है ।",
+            "matra": "ई",
+            "status": "begin"
+        },
+        {
+            "sentence": "चीता भाग रहा है ।",
+            "matra": "ई",
+            "status": "review"
+        }
+    ]
