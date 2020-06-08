@@ -13,7 +13,7 @@ class scramble {
         btmScrambleNext.onclick = function () {
             self._nextQuestion();
         };
-        loadscrambledSentence().then((response) => {
+        loadDoc("./wordsInHindi/newScrambledSentence.json").then((response) => {
             self.#scrambledSentenceJsonData = response;
             self._scrambledString();
         });
@@ -25,6 +25,7 @@ class scramble {
     _scrambledString() {
         //debugger;   a = scrambledSentenceJsonData;      console.log(scrambledSentenceJsonData);
         let displayString = "";
+        this._checkStatus();
         let sentence = this.#answerString = this.#scrambledSentenceJsonData[this.#i].sentence;
         if (this.#scrambledSentenceJsonData[this.#i].alternate) {
             this.#alternateString = this.#scrambledSentenceJsonData[this.#i].alternate;
@@ -37,6 +38,11 @@ class scramble {
         // unscramble && (unscramble.innerHTML = displayString);
         //checkAndUpdate();
     }
+    _checkStatus() {
+        while (this.#scrambledSentenceJsonData[this.#i].status !== "begin")
+            this.#i += 1;
+        //return this.#i;
+    }
     _compareJumbledArray() {
         let droppedString = '';
         const divUnScramble = document.getElementById('divUnScramble');
@@ -44,7 +50,7 @@ class scramble {
             droppedString += divUnScramble.children[j].innerHTML + " ";
         }
         document.getElementById("displayResult").innerHTML =
-            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ?
+            ((droppedString.trim() === this.#answerString) || (this.#alternateString && droppedString.trim() === this.#alternateString)) ?
                 "correct" : "Wrong";
     }
     //document.getElementById('btnScramble')!.onclick as HTMLButtonElement = compareJumbledArray();
@@ -63,11 +69,6 @@ class scramble {
     }
 }
 let a = new scramble();
-async function loadscrambledSentence() {
-    const response = await fetch("./wordsInHindi/newScrambledSentence.json");
-    //scramble.
-    return await response.json();
-}
 function getJumbledSting(currentScrambledString) {
     let originalArr = currentScrambledString.split(' ');
     let jumbledString = [];

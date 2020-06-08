@@ -1,9 +1,9 @@
-function allowDrop(ev : Event)
+function allowDrop(ev: Event)
 {
     ev.preventDefault();
 }
 
-function drag(ev : DragEvent)
+function drag(ev: DragEvent)
 {
     ev.dataTransfer && ev.dataTransfer.setData("text", (ev.target! as HTMLElement).id);
 }
@@ -19,7 +19,7 @@ function drop(ev: DragEvent)
     }
 }
 
-function DraggableText(data : string[], id: string)
+function DraggableText(data: string[], id: string)
 {
     for (var i = 0; i < data.length; i++)
     {
@@ -34,27 +34,10 @@ function DraggableText(data : string[], id: string)
 }
 
 
-async function loadDoc()
+async function loadDoc(url: string)
 {
-    const response = await fetch("./wordsInHindi/newWordInHindi.json");
-    myString(await response.json());
+    const response = await fetch(url);
+    return await response.json();
 }
 
-// loadDoc();
 
-
-/* function myPrintData(jsMydata,i)
-{
-
-    var letterString = jsMydata[i].letters;
-    var letterArray = letterString.split(' ');
-    var currentWord = jsMydata[i].word;
-    DraggableText(letterArray);
-    var obj = new compareString(currentWord, letterArray,i);
-
-} */
-
-
-//var data = ['कि', 'ता', 'ब'];
-//var a = new DraggableText( data);
-//a.addSpan(); 

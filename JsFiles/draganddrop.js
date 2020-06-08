@@ -24,22 +24,8 @@ function DraggableText(data, id) {
         elem && elem.appendChild(el);
     }
 }
-async function loadDoc() {
-    const response = await fetch("./wordsInHindi/newWordInHindi.json");
-    myString(await response.json());
+async function loadDoc(url) {
+    const response = await fetch(url);
+    return await response.json();
 }
-// loadDoc();
-/* function myPrintData(jsMydata,i)
-{
-
-    var letterString = jsMydata[i].letters;
-    var letterArray = letterString.split(' ');
-    var currentWord = jsMydata[i].word;
-    DraggableText(letterArray);
-    var obj = new compareString(currentWord, letterArray,i);
-
-} */
-//var data = ['कि', 'ता', 'ब'];
-//var a = new DraggableText( data);
-//a.addSpan(); 
 //# sourceMappingURL=draganddrop.js.map

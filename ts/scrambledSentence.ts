@@ -28,7 +28,7 @@ class scramble
 
         };
 
-        loadscrambledSentence().then((response: jumbledData[]) =>
+        loadDoc("./wordsInHindi/newScrambledSentence.json").then((response: jumbledData[]) =>
         {
             self.#scrambledSentenceJsonData = response;
             self._scrambledString();
@@ -39,6 +39,7 @@ class scramble
     {
         //debugger;   a = scrambledSentenceJsonData;      console.log(scrambledSentenceJsonData);
         let displayString = "";
+        this._checkStatus();
         let sentence = this.#answerString = this.#scrambledSentenceJsonData[this.#i].sentence;
         if (this.#scrambledSentenceJsonData[this.#i].alternate)
         {
@@ -46,6 +47,7 @@ class scramble
         }
 
         let JumbledArray = getJumbledSting(sentence);
+
         DraggableText(JumbledArray, "divScramble");
         let self = this;
 
@@ -56,6 +58,15 @@ class scramble
         // unscramble && (unscramble.innerHTML = displayString);
 
         //checkAndUpdate();
+    }
+
+    _checkStatus()     // check status whether question is beginnerer question or review question
+    {
+        while (this.#scrambledSentenceJsonData[this.#i].status !== "begin")
+            this.#i += 1;
+
+        //return this.#i;
+
     }
 
 
@@ -70,7 +81,7 @@ class scramble
         }
 
         document.getElementById("displayResult")!.innerHTML =
-            ((droppedString.trim() === this.#answerString) || (droppedString.trim() === this.#alternateString)) ?
+            ((droppedString.trim() === this.#answerString) || (this.#alternateString && droppedString.trim() === this.#alternateString)) ?
                 "correct" : "Wrong";
     }
 
@@ -97,16 +108,6 @@ class scramble
 }
 
 let a = new scramble();
-
-async function loadscrambledSentence()
-{
-
-    const response = await fetch("./wordsInHindi/newScrambledSentence.json");
-    //scramble.
-    return await response.json();
-}
-
-
 
 function getJumbledSting(currentScrambledString: string): string[]
 {

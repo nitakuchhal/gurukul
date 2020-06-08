@@ -11,25 +11,25 @@
             "alternate": "यह उमा का गिलास है ।"
         },
         {
-            "sentence": "राजा आम उठा रहा है ।",
-            "matra": "आ",
-            "status": "begin"
-        },
-        {
             "sentence": "अजय पाठशाला जा रहा है ।",
             "matra": "आ",
             "status": "review"
+        },
+        {
+            "sentence": "अमर एक अनानास ला ।",
+            "matra": "आ",
+            "status": "review"
+        },        
+        {
+            "sentence": "राजा आम उठा रहा है ।",
+            "matra": "आ",
+            "status": "begin"
         },
         {
             "sentence": "यह तकिया लाल है ।",
             "matra": "इ",
             "status": "begin",
             "alternate": "यह लाल तकिया है ।"
-        },
-        {
-            "sentence": "अमर एक अनानास ला ।",
-            "matra": "आ",
-            "status": "review"
         },
         {
             "sentence": "राम हरा आम खा रहा था ।",
@@ -40,6 +40,11 @@
             "sentence": "ईशान घर पर पढ़ता है ।",
             "matra": "आ",
             "status": "review"
+        },
+        {
+            "sentence": "मानस गिटार बजा रहा है ।",
+            "matra": "इ",
+            "status": "begin"
         },
         {
             "sentence": "इवान पढ़ रहा था ।",
@@ -58,11 +63,6 @@
         },
         {
             "sentence": "परिवार खाना खा रहा है ।",
-            "matra": "इ",
-            "status": "begin"
-        },
-        {
-            "sentence": "मानस गिटार बजा रहा है ।",
             "matra": "इ",
             "status": "begin"
         },
