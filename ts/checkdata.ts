@@ -1,24 +1,7 @@
-// #1
-/* function abc(aa)
-{
-    this.a = aa;    this.b = 1; function pr()     {     }
-}
-abc.prototype.sdsd = function () { }
-
-var obj = new abc("aa");  obj.sdsd();
-function abc(aa)
-{   var a = 'sd';    
-    function sdsd()
-    {     }
-    var ff = function ()
-    {      }
-    ff();    sdsd();    abc.prototype.zxzxzx = ff;
-}
-var obj = new abc("aa");  obj.sdsd(); */
 interface IData
 {
     word: string,
-    matra: string,    
+    matra: string,
     letters: string,
     image: string,
     sound: string,
@@ -27,12 +10,12 @@ interface IData
     possibeWords: string
 }
 
-function myString(jsMydata : IData[])
+function myString(jsMydata: IData[])
 {
-    let answerString : string;
+    let answerString: string;
     let i = 0;
 
-    function myPrintData(i : number)
+    function myPrintData(i: number)
     {
 
         var letterString = jsMydata[i].letters;
@@ -43,6 +26,7 @@ function myString(jsMydata : IData[])
         (document.getElementById("myImage") as HTMLImageElement).src = "./images/" + jsMydata[i].image;
 
     }
+
     myPrintData(i);
 
     function compare()
