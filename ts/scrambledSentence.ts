@@ -64,10 +64,7 @@ class scramble
     {
         while (this.#scrambledSentenceJsonData[this.#i].status !== "begin")
             this.#i += 1;
-
-        //return this.#i;
-
-    }
+     }
 
 
     _compareJumbledArray()
@@ -84,8 +81,6 @@ class scramble
             ((droppedString.trim() === this.#answerString) || (this.#alternateString && droppedString.trim() === this.#alternateString)) ?
                 "correct" : "Wrong";
     }
-
-    //document.getElementById('btnScramble')!.onclick as HTMLButtonElement = compareJumbledArray();
 
     _nextQuestion()
     {

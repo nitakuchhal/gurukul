@@ -1,49 +1,43 @@
 <!DOCTYPE HTML>
 <html>
-   <style>
-   a
-   {
-    font-size: 30px;
-    color: brown;
-    margin-left: 40px;
-      }
-
-      ul{
-         color: black;
-    font-size: 35px;
-    font-weight: bold;
+    <script src="./JsFiles/draganddrop.js" type="text/javascript"></script>
+     <link rel="stylesheet" href="./css/style.css">
    
-      }
-           
-   </style>
 <head>
 
-   <h1> level 3</h1>
-
-</head>
+ </head>
 <body>
-   <ul> Select Matra
-      <li>
- <a href="drag_and_drop.html?data=i">इ की मात्रा</a></li>
- <li><a href="drag_and_drop.html?data=ee">ई की मात्रा</a></li>
-    </ul>
- <span style='border:3px solid #fe1111' >
-This 
-</span>
-<span font: 20px style='border:2px solid #fe1111' padding: 20px>
- is 
-</span>
-<span style='border:2px solid #fe1111' padding: 20px margin:10px>
-  a 
-</span>
+ <div class="outerbox" >  
+   <table>
+<tr>
+   <td>
+      <span class="box">
+      <a href="drag_and_drop.html?data=i">इ की मात्रा</a> </span>
+   </td>
+   <td>
+       <span class="box">
+     <a href="drag_and_drop.html">शब्द बनाओ</a> </span>
+   </td>
+</tr>
 
-<span style='border:4px solid #491616' >
-  mesage to check
-</span>
+<tr>
+   <td>
+      <span class="box">
+      <a href="unscrambleTheSentence.html">वाक्य बनाओ</a></span>
+   </td>
+   <td>
+      <span class="box">
+     <a href="./flexbox.html">Comprehension</a> </span>
+   </td>
+</tr>
+  </table>
 
+</div>
 
-
-
-
+<div class="video" id="displayVideo" >
+   <video controls id="videoSrc" type="video/mp4"></video>
+   <button onclick="closeVideo()">Close</button>
+</div>
+ 
 </body>
 </html>

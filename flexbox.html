@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+.flex-container {
+  display: flex;
+ 
+  flex-wrap: wrap ;
+ }
+
+.flex-container > div {
+  background-color: #b6ebf1;
+  margin: 10px;
+  padding: 30px;
+  font-size: 30px;
+}
+
+.img {
+  padding: 20px;
+  margin: 20px;
+}
+.bgimg {
+    background-image: url('./Images/woodbackground.jpg');
+}
+.bgimg >a {
+margin: 40px 10px 5px 10px;
+
+}
+.divBookPlayer {
+  position: absolute;
+  display: none;
+   top: 50px;
+   left:50px;
+   width: 80%;
+   height : 80%;
+   border-radius: 16px;
+   background-color: white;
+   font-size: x-large;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="flex-container" back>
+     <div id="displayBookCover" class ="bgimg"></div>
+</div>
+
+
+<script src="./JsFiles/draganddrop.js" type="text/javascript"></script>
+ <script src="./JsFiles/loadBookCoverPage.js" type="text/javascript"></script>
+ <div id="displayBook" class="divBookPlayer">
+       <button id="replayAudio" type="button" class="btn btn-info"  onclick="bookAudioPlay()">Audio Play</button>
+       <div id="bookText"></div>
+    </div>
+
+  </body>
+</html>

@@ -1,7 +1,9 @@
 "use strict";
-function myString(jsMydata) {
+let jsMydata;
+function myString() {
     let answerString;
     let i = 0;
+    var audio;
     function myPrintData(i) {
         var letterString = jsMydata[i].letters;
         var letterArray = letterString.split(' ');
@@ -10,6 +12,13 @@ function myString(jsMydata) {
         document.getElementById("myImage").src = "./images/" + jsMydata[i].image;
     }
     myPrintData(i);
+    function audioPlay() {
+        var audioPath = "./Sounds/" + jsMydata[i].sound;
+        audio = new Audio(audioPath);
+        audio.load();
+        audio.play();
+    }
+    document.getElementById("playAudio").onclick = audioPlay;
     function compare() {
         let divString = '';
         let newstring = document.getElementById("div1");
@@ -30,6 +39,10 @@ function myString(jsMydata) {
     document.getElementById("button1").onclick = compare;
     document.getElementById("button2").onclick = aaa;
 }
+loadDoc("./wordsInHindi/newWordInHindi.json").then((response) => {
+    jsMydata = response;
+    myString();
+});
 //var compreObject = new compareString;
 //document.getElementById("button1").onclick = compreObject.compare();
 //onclick = "checkData()"

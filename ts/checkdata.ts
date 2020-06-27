@@ -5,18 +5,20 @@ interface IData
     letters: string,
     image: string,
     sound: string,
-    begSound: string,
-    endSound: string,
-    possibeWords: string
 }
 
-function myString(jsMydata: IData[])
+let jsMydata: IData[];
+
+function myString()
 {
     let answerString: string;
     let i = 0;
+    var audio: HTMLAudioElement;
+
 
     function myPrintData(i: number)
     {
+
 
         var letterString = jsMydata[i].letters;
         var letterArray = letterString.split(' ');
@@ -28,6 +30,17 @@ function myString(jsMydata: IData[])
     }
 
     myPrintData(i);
+
+    function audioPlay()  
+    {
+        var audioPath = "./Sounds/" + jsMydata[i].sound;
+
+        audio = new Audio(audioPath);
+        audio.load();
+        audio.play();
+    }
+    document.getElementById("playAudio")!.onclick = audioPlay;
+
 
     function compare()
     {
@@ -52,10 +65,21 @@ function myString(jsMydata: IData[])
     }
     document.getElementById("button1")!.onclick = compare;
     document.getElementById("button2")!.onclick = aaa;
-
-
-
 }
+
+loadDoc("./wordsInHindi/newWordInHindi.json").then((response: []) =>
+{
+    jsMydata = response;
+    myString();
+});
+
+
+
+
+
+
+
+
 //var compreObject = new compareString;
 //document.getElementById("button1").onclick = compreObject.compare();
 //onclick = "checkData()"

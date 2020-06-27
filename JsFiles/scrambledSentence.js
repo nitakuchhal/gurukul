@@ -41,7 +41,6 @@ class scramble {
     _checkStatus() {
         while (this.#scrambledSentenceJsonData[this.#i].status !== "begin")
             this.#i += 1;
-        //return this.#i;
     }
     _compareJumbledArray() {
         let droppedString = '';
@@ -53,7 +52,6 @@ class scramble {
             ((droppedString.trim() === this.#answerString) || (this.#alternateString && droppedString.trim() === this.#alternateString)) ?
                 "correct" : "Wrong";
     }
-    //document.getElementById('btnScramble')!.onclick as HTMLButtonElement = compareJumbledArray();
     _nextQuestion() {
         if (this.#i === this.#scrambledSentenceJsonData.length - 1) {
             document.getElementById('btmScrambleNext').innerHTML = "Done";

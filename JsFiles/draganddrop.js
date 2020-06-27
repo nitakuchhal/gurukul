@@ -28,4 +28,17 @@ async function loadDoc(url) {
     const response = await fetch(url);
     return await response.json();
 }
+function openVideo() {
+    let vid;
+    vid = document.getElementById("displayVideo");
+    vid.style.display = "block";
+    const video = document.getElementById("videoSrc");
+    video.src = "./videos/KoyalListen.mp4";
+}
+function closeVideo() {
+    const vid = document.getElementById("displayVideo");
+    vid.style.display = "none";
+    const video = document.getElementById("videoSrc");
+    video.src = "";
+}
 //# sourceMappingURL=draganddrop.js.map
